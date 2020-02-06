@@ -1,51 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ Project: Lab 3 - Group
+ Purpose Details: Connections
+ Course: IST 411
+ Author: Ryan Urbanski, Albana Beqo, James Bristow II, Logan Pratt, Fred Aaron
+ Date Developed: 2/9/2020
+ Last Date Changed:2/6/2020
+ Revision: 1
  */
 package ist411t1connections;
 
-import com.google.gson.Gson;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
+import java.util.Scanner;
 
 /**
  *
- * @author loganpratt
+ * @author Ryan Urbanski, Albana Beqo, James Bristow II, Logan Pratt, Fred Aaron
  */
-public class Lab3 {
+public class Lab3
+{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Gson gson  = new Gson();
-        HttpURLConnection connection = null;
-        
-        try {
-            URL url = new URL("https://api.bitcoincharts.com/v1/markets.json");//"//https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?Auth");
-            //String accessToken = "bcmSfMEsrTedUuwYATBRFMHKgjcWJfil";
-            connection = (HttpURLConnection) url.openConnection();
-            //connection.setRequestProperty("Authorization", "Bearer " + accessToken);
-            connection.connect();
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()));
-            System.out.println(br.readLine());
-                
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(Lab3.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Lab3.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            connection.disconnect();
-        }
-    }
-    
+   /**
+    * @param args the command line arguments
+    */
+   public static void main(String[] args)
+   {
+      Scanner scnr = new Scanner(System.in); //Set up Scanner.
+
+      int ans;
+      System.out.println("Enter 1 for BitCoin or 2 for Noaa.");
+      ans = scnr.nextInt();
+      if (ans == 1)
+      {
+         BitCoin coin = new BitCoin();
+      }
+      else if (ans == 2)
+      {
+         Noaa noaa = new Noaa();
+      }
+   }
 }
