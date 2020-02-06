@@ -27,18 +27,21 @@ public class Noaa
          HttpURLConnection connection = null;
 
          connection = (HttpURLConnection) url.openConnection();
+         // Add Access Token to the Header
          connection.setRequestProperty("token", accessToken);
-         //InputStream inputStream = connection.getInputStream();
 
          BufferedReader br = new BufferedReader(
                  new InputStreamReader(connection.getInputStream()));
          response = br.readLine();
 
+         // Parse Data into Noaa Object
          NoaaData noaa = gson.fromJson(response, NoaaData.class);
 
+         // Print original Data from the API
          System.out.println("Original JSON Data.");
          System.out.println(response + "\n");
 
+         // Print out data from the Noaa Objects
          System.out.println("Result Set");
          System.out.println("----------");
          System.out.printf("Count  %10s\n", noaa.getMetadata().getResultset().getCount());
@@ -46,8 +49,8 @@ public class Noaa
          System.out.printf("Offset %10s\n", noaa.getMetadata().getResultset().getOffset());
          System.out.printf("limit  %10s\n", noaa.getMetadata().getResultset().getLimit());
 
+         // Print data from array in Noaa Object
          size = noaa.getResults().length;
-         System.out.println("Size of array is " + size);
          for (int i = 0; i < size; i++)
          {
             System.out.println("Item " + i);
@@ -63,6 +66,8 @@ public class Noaa
       } catch (IOException ex)
       {
          System.out.println(ex);
+      }finally
+      {
       }
    }
    

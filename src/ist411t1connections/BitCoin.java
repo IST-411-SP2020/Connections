@@ -34,15 +34,19 @@ public class BitCoin
          BufferedReader br = new BufferedReader(
                  new InputStreamReader(connection.getInputStream()));
 
+         //BitCoin does not name its array append a name to the beginning of the data
          response = "{\"bitcoin\":";
          response += (br.readLine());
          response += "}";
-
+         
+         // Print the original data received from the API
          System.out.println("Original JSON data.");
          System.out.println(response + "\n");
 
+         // Parse the data into Bitcoin Object
          BitCoinData data = gson.fromJson(response, BitCoinData.class);
 
+         // Print values of each array element
          size = data.getBitcoin().length;
          for (int i = 0; i < size; i++)
          {
