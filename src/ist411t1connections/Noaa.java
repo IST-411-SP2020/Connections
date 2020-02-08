@@ -63,12 +63,13 @@ public class Noaa
             System.out.printf("ID             %1s\n", noaa.getResults()[i].getId());
             System.out.println();
          }
+          connection.disconnect();
       } catch (IOException ex)
       {
          System.out.println(ex);
       }finally
-      {
-      }
+      {         
+      }     
    }
    
 }
