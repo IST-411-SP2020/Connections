@@ -20,12 +20,11 @@ public class Noaa
       Gson gson = new Gson();
       String response;
       int size;
-
+      HttpURLConnection connection = null;
+      
       try
       {
          URL url = new URL("https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets");
-         HttpURLConnection connection = null;
-
          connection = (HttpURLConnection) url.openConnection();
          // Add Access Token to the Header
          connection.setRequestProperty("token", accessToken);
