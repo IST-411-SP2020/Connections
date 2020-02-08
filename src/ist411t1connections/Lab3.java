@@ -31,19 +31,19 @@ public class Lab3
       {
          System.out.println("Enter 1 for BitCoin or 2 for Noaa.");
          ans = scnr.nextInt();
-         if (ans == 1)
+         switch (ans)
          {
-            BitCoin coin = new BitCoin();
-            valid = true;
-         }
-         else if (ans == 2)
-         {
-            Noaa noaa = new Noaa();
-            valid = true;
-         }
-         else
-         {
-            System.out.println("Wrong number!");
+            case 1:
+               BitCoin coin = new BitCoin();
+               valid = true;
+               break;
+            case 2:
+               Noaa noaa = new Noaa();
+               valid = true;
+               break;
+            default:
+               System.out.println("Wrong number!");
+               break;
          }
       }
    }
