@@ -6,71 +6,71 @@ package ist411t1connections;
  */
 public class Results
 {
-   private String uid;
-   private String mindate;
-   private String maxdate;
-   private String name;
-   private String datacoverage;
-   private String id;
 
-   public String getUid()
-   {
-      return uid;
-   }
+    private String uid;
+    private String mindate;
+    private String maxdate;
+    private String name;
+    private String datacoverage;
+    private String id;
 
-   public void setUid(String uid)
-   {
-      this.uid = uid;
-   }
+    public String getUid()
+    {
+        return uid;
+    }
 
-   public String getMindate()
-   {
-      return mindate;
-   }
+    public void setUid(String uid)
+    {
+        this.uid = uid;
+    }
 
-   public void setMindate(String mindate)
-   {
-      this.mindate = mindate;
-   }
+    public String getMindate()
+    {
+        return mindate;
+    }
 
-   public String getMaxdate()
-   {
-      return maxdate;
-   }
+    public void setMindate(String mindate)
+    {
+        this.mindate = mindate;
+    }
 
-   public void setMaxdate(String maxdate)
-   {
-      this.maxdate = maxdate;
-   }
+    public String getMaxdate()
+    {
+        return maxdate;
+    }
 
-   public String getName()
-   {
-      return name;
-   }
+    public void setMaxdate(String maxdate)
+    {
+        this.maxdate = maxdate;
+    }
 
-   public void setName(String name)
-   {
-      this.name = name;
-   }
+    public String getName()
+    {
+        return name;
+    }
 
-   public String getDatacoverage()
-   {
-      return datacoverage;
-   }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-   public void setDatacoverage(String datacoverage)
-   {
-      this.datacoverage = datacoverage;
-   }
+    public String getDatacoverage()
+    {
+        return datacoverage;
+    }
 
-   public String getId()
-   {
-      return id;
-   }
+    public void setDatacoverage(String datacoverage)
+    {
+        this.datacoverage = datacoverage;
+    }
 
-   public void setId(String id)
-   {
-      this.id = id;
-   }
+    public String getId()
+    {
+        return id;
+    }
 
+    public void setId(String id)
+    {
+        this.id = id;
+    }
 }

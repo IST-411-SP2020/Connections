@@ -7,16 +7,15 @@ package ist411t1connections;
 public class MetaData
 {
 
-   private ResultSet resultset;
+    private ResultSet resultset;
 
-   public ResultSet getResultset()
-   {
-      return resultset;
-   }
+    public ResultSet getResultset()
+    {
+        return resultset;
+    }
 
-   public void setResultset(ResultSet resultset)
-   {
-      this.resultset = resultset;
-   }
-
+    public void setResultset(ResultSet resultset)
+    {
+        this.resultset = resultset;
+    }
 }

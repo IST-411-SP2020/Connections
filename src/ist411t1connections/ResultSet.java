@@ -6,38 +6,38 @@ package ist411t1connections;
  */
 public class ResultSet
 {
-   private String offset;
-   private String count;
-   private String limit;
 
-   public String getOffset()
-   {
-      return offset;
-   }
+    private String offset;
+    private String count;
+    private String limit;
 
-   public void setOffset(String offset)
-   {
-      this.offset = offset;
-   }
+    public String getOffset()
+    {
+        return offset;
+    }
 
-   public String getCount()
-   {
-      return count;
-   }
+    public void setOffset(String offset)
+    {
+        this.offset = offset;
+    }
 
-   public void setCount(String count)
-   {
-      this.count = count;
-   }
+    public String getCount()
+    {
+        return count;
+    }
 
-   public String getLimit()
-   {
-      return limit;
-   }
+    public void setCount(String count)
+    {
+        this.count = count;
+    }
 
-   public void setLimit(String limit)
-   {
-      this.limit = limit;
-   }
+    public String getLimit()
+    {
+        return limit;
+    }
 
+    public void setLimit(String limit)
+    {
+        this.limit = limit;
+    }
 }
