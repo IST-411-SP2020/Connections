@@ -7,15 +7,15 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
- /**
+/**
  *
  * @author Ryan Urbanski, Albana Beqo, James Bristow II, Logan Pratt, Fred Aaron
  */
-
 public class Noaa
 {
-   public Noaa(){
+
+   public Noaa()
+   {
       String accessToken = "DiQSujhXdqsBIqtaBhHhRGvpINuEcnhq";
       Gson gson = new Gson();
       String response;
@@ -44,16 +44,15 @@ public class Noaa
          // Print out data from the Noaa Objects
          System.out.println("Result Set");
          System.out.println("----------");
-         System.out.printf("Count  %10s\n", noaa.getMetadata().getResultset().getCount());
-         
          System.out.printf("Offset %10s\n", noaa.getMetadata().getResultset().getOffset());
+         System.out.printf("Count  %10s\n", noaa.getMetadata().getResultset().getCount());
          System.out.printf("limit  %10s\n", noaa.getMetadata().getResultset().getLimit());
 
          // Print data from array in Noaa Object
          size = noaa.getResults().length;
          for (int i = 0; i < size; i++)
          {
-            System.out.println("Item " + i);
+            System.out.println("Result " + i);
             System.out.println("--------");
             System.out.printf("Uid            %1s\n", noaa.getResults()[i].getUid());
             System.out.printf("Min Date       %1s\n", noaa.getResults()[i].getMindate());
@@ -63,13 +62,13 @@ public class Noaa
             System.out.printf("ID             %1s\n", noaa.getResults()[i].getId());
             System.out.println();
          }
-          connection.disconnect();
+         connection.disconnect();
       } catch (IOException ex)
       {
          System.out.println(ex);
-      }finally
-      {         
-      }     
+      } finally
+      {
+      }
    }
-   
+
 }
