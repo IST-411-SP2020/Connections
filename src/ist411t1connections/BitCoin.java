@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author Ryan Urbanski, Albana Beqo, James Bristow II, Logan Pratt, Fred Aaron
+ * reviewed by Albana 
  */
 public class BitCoin
 {
